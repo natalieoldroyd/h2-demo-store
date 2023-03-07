@@ -108,8 +108,8 @@ export default function Reset() {
     ) {
       setNativePasswordConfirmError('The two passwords entered did not match.');
     } else if (
-      passwordConfirmInput.current.validity.valid &&
-      passwordConfirmInput.current.value.length
+      passwordConfirmInput.current.validity.valid ||
+      !passwordConfirmInput.current.value.length
     ) {
       setNativePasswordConfirmError(null);
     } else {
