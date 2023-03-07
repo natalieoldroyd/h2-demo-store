@@ -141,8 +141,8 @@ export default function Register() {
               autoFocus
               onBlur={(event) => {
                 if (
-                  event.currentTarget.validity.valid ||
-                  !event.currentTarget.value.length
+                  event.currentTarget.validity.valid &&
+                  event.currentTarget.value.length
                 ) {
                   setNativePasswordError(null);
                 } else {
